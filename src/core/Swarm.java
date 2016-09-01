@@ -5,16 +5,32 @@ import java.util.ArrayList;
  */
 public class Swarm {
 
-    private int individualsNum;
+    private int swarmSize;
     private ArrayList<Individual> swarmMembers;
     private ArrayList<int, int> distances;
     private Room room;
 
     public void initSwarm(int num) {
-        this.individualsNum = num;
-        this.swarmMembers = new ArrayList<>(this.individualsNum);
-        for (Individual member : swarmMember) {
-            member.initMember();
+        this.swarmSize = num;
+        this.swarmMembers = new ArrayList<>(this.swarmSize);
+        for (int i = 0; i < this.swarmSize; i++) {
+            this.swarmMembers.get(i).initMember(room, i);
         }
     }
+
+    public void doSwarming() {
+        for (int i = 0; i < this.swarmSize; i++) {
+            this.swarmMembers.get(i).doSwarming(Swarm.this);
+        }
+    }
+
+    public ArrayList<Individual> getSwarmMembers() {
+        return this.swarmMembers;
+    }
+
+    public int getSwarmSize() {
+        return this.swarmSize;
+    }
+
+
 }

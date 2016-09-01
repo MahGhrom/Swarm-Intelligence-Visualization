@@ -7,12 +7,12 @@ import java.util.Vector;
  */
 public class Room {
 
-    private int width;
-    private int height;
+    private Vector<Integer> dimentions;
 
-    public void initRoom(int w, int h) {
-        this.width = w;
-        this.height = h;
+
+    public void initRoom(Vector<Integer> v) {
+        this.dimentions = new Vector<>();
+        this.dimentions = v;
     }
 
     public Vector<Double> getBorderRepulsion() {
@@ -23,11 +23,7 @@ public class Room {
 
     }
 
-    public int getWidth() {
-       return this.width;
-    }
-
-    public int getHeight() {
-        return this.height;
+    public Vector<Integer> getDimentions() {
+        return this.dimentions;
     }
 }
