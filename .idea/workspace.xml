@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05d3addd-f369-4875-8fef-a86e8a73c3e6" name="Default" comment="Simple GUI, minor addings.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GUI.form" />
+    <list default="true" id="05d3addd-f369-4875-8fef-a86e8a73c3e6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/Distance.java" afterPath="$PROJECT_DIR$/src/core/Distance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/Individual.java" afterPath="$PROJECT_DIR$/src/core/Individual.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/Room.java" afterPath="$PROJECT_DIR$/src/core/Room.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/Swarm.java" afterPath="$PROJECT_DIR$/src/core/Swarm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/GUI.java" afterPath="$PROJECT_DIR$/src/gui/GUI.java" />
     </list>
     <ignored path="SwarmIntelligenceVisualization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -495,6 +488,14 @@
       <option name="presentableId" value="Default" />
       <updated>1471042754870</updated>
     </task>
+    <task id="LOCAL-00001" summary="Simple GUI, minor addings.">
+      <created>1472858283431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1472858283432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
