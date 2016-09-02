@@ -7,23 +7,24 @@ import java.util.Vector;
  */
 public class Room {
 
-    private Vector<Integer> dimentions;
+    private Vector<Integer> dimensions;
 
 
     public void initRoom(Vector<Integer> v) {
-        this.dimentions = new Vector<>();
-        this.dimentions = v;
+        this.dimensions = new Vector<>();
+        this.dimensions = v;
     }
 
-    public Vector<Double> getBorderRepulsion() {
-
+    public Vector<Double> getBorderRepulsion(Vector<Double> position) {
+        Vector<Double> repulsion = new Vector<>(this.dimensions.size());
+        return repulsion;
     }
 
     public void borderManagement(Swarm swarm) {
 
     }
 
-    public Vector<Integer> getDimentions() {
-        return this.dimentions;
+    public Vector<Integer> getDimensions() {
+        return this.dimensions;
     }
 }

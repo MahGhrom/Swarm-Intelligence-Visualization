@@ -18,11 +18,11 @@ public class Individual {
 
     public void initMember(Room room, int id) {
         this.ID = id;
-        this.dimentionsNum = room.getDimentions().size();
+        this.dimentionsNum = room.getDimensions().size();
         this.position = new Vector<>();
         this.velocity = new Vector<>();
-        for (int i = 0; i < room.getDimentions().size(); i++) {
-            this.position.add(i, Math.random()*room.getDimentions().get(i));
+        for (int i = 0; i < room.getDimensions().size(); i++) {
+            this.position.add(i, Math.random()*room.getDimensions().get(i));
             this.velocity.add(i,(Math.random()*this.startingVelocity*2 - this.startingVelocity));
         }
     }

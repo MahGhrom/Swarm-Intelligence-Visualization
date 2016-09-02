@@ -7,10 +7,10 @@ public class Swarm {
 
     private int swarmSize;
     private ArrayList<Individual> swarmMembers;
-    private ArrayList<int, int> distances;
     private Room room;
 
-    public void initSwarm(int num) {
+    public void initSwarm(Room r, int num) {
+        this.room = r;
         this.swarmSize = num;
         this.swarmMembers = new ArrayList<>(this.swarmSize);
         for (int i = 0; i < this.swarmSize; i++) {
