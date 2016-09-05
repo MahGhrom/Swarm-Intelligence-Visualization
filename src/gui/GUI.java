@@ -26,7 +26,7 @@ public class GUI {
     private JPanel drawPanel;
     private JButton pauseButton;
 
-    Graphics2D gr;
+    //Graphics2D gr;
     SwarmingLoop loop;
 
     public static void main(String[] args) {

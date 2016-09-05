@@ -29,6 +29,7 @@ public class Swarm {
         for (int i = 0; i < this.swarmSize; i++) {
             this.swarmMembers.get(i).doSwarming(Swarm.this);
         }
+        this.room.borderManagement(Swarm.this);
     }
 
     public ArrayList<Individual> getSwarmMembers() {
