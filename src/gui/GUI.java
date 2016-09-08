@@ -13,7 +13,7 @@ import java.util.Vector;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * Created by Ghrom on 02.09.2016.
+ * Created by (serhii.vasylchenko@gmail.com) on 02.09.2016.
  */
 public class GUI {
 
@@ -27,7 +27,7 @@ public class GUI {
     private JButton pauseButton;
 
     //Graphics2D gr;
-    SwarmingLoop loop;
+    private SwarmingLoop loop;
 
     public static void main(String[] args) {
         JFrame mainWindow = new JFrame("Simple swarm visualization");
@@ -44,7 +44,7 @@ public class GUI {
             public void actionPerformed(ActionEvent e) {
                 loop = new SwarmingLoop(drawPanel, Integer.parseInt(numberOfIndividuals.getText()));
                 Thread thread = new Thread(loop);
-                thread.run();
+                thread.start();
             }
         });
         stopButton.addActionListener(new ActionListener() {

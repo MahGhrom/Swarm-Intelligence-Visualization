@@ -3,7 +3,8 @@ package core;
 import java.util.Vector;
 
 /**
- * Created by Ghrom on 02.09.2016.
+ *
+ * Created by (serhii.vasylchenko@gmail.com) on 02.09.2016.
  */
 public class Distance {
 

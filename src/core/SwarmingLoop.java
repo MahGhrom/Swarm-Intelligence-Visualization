@@ -1,20 +1,19 @@
 package core;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * Created by Ghrom on 04.09.2016.
+ * Created by (serhii.vasylchenko@gmail.com) on 04.09.2016.
  */
 public class SwarmingLoop implements Runnable {
 
     private AtomicBoolean keepRunning;
 
-    Room room;
-    Swarm swarm;
-    JPanel drawPanel;
-    int swarmSize;
+    private JPanel drawPanel;
+    private int swarmSize;
 
     public SwarmingLoop(JPanel panel, int num) {
         keepRunning = new AtomicBoolean(true);
@@ -33,8 +32,8 @@ public class SwarmingLoop implements Runnable {
 
     @Override
     public void run() {
-        room = new Room();
-        swarm = new Swarm();
+        Room room = new Room();
+        Swarm swarm = new Swarm();
 
         Vector<Integer> dimensions = new Vector<>();
         dimensions.add(drawPanel.getWidth());
@@ -43,6 +42,7 @@ public class SwarmingLoop implements Runnable {
         swarm.initSwarm(room, swarmSize);
         while (keepRunning.get()) {
             //Drawing
+            //Graphics2D gr = new (Graphics2D) Graphics();
             int x;
             int y;
             for (int i = 0; i < swarmSize; i++) {

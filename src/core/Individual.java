@@ -15,8 +15,8 @@ public class Individual {
     private int dimensionsNum = 0;
     private Vector<Double> position;
     private Vector<Double> velocity;
-    private double inertiaValue = 0.3;
-    private double startingVelocity = 3;
+    private double inertiaWeight = 0.3;
+    private double startingVelocity = 3; // Maximum value for starting velocity
     private double direction = 0;
 
     /**
@@ -31,6 +31,7 @@ public class Individual {
         this.dimensionsNum = room.getDimensions().size();
         this.position = new Vector<>();
         this.velocity = new Vector<>();
+        // Random initialization
         for (int i = 0; i < room.getDimensions().size(); i++) {
             this.position.add(i, Math.random()*(room.getDimensions().get(i) / 10));
             this.velocity.add(i,(Math.random()*this.startingVelocity*2 - this.startingVelocity));
@@ -86,10 +87,12 @@ public class Individual {
 
         // Motion equations:
         // pos(i+1) = pos(i) + vel(i+1)
-        // vel(i+1) = inertiaValue * vel(i) + swarmFunction + borderRepulsion
+        // vel(i+1) = inertiaWeight * vel(i) + swarmFunction + borderRepulsion
         for (int i = 0; i < this.dimensionsNum; i++) {
-            this.velocity.set(i, this.inertiaValue * this.velocity.get(i) + swarmFunction.get(i) + this.room.getBorderRepulsion(this.position).get(i));
+            this.velocity.set(i, this.inertiaWeight * this.velocity.get(i) + swarmFunction.get(i) + this.room.getBorderRepulsion(this.position).get(i));
             this.position.set(i, this.position.get(i) + this.velocity.get(i));
         }
+
+        // TODO: Calculate the direction of the motion
     }
 }
